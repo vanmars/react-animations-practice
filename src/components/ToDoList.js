@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-transition-group';
+import { CSSTransitionGroup } from 'react-transition-group';
 
-class TodoList extends React.Component {
+class ToDoList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {items: ['hello', 'world', 'click', 'me']};
@@ -31,12 +31,12 @@ class TodoList extends React.Component {
     return (
       <div>
         <button onClick={this.handleAdd}>Add Item</button>
-        <ReactCSSTransitionGroup
+        <CSSTransitionGroup
           transitionName="example"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}>
           {items}
-        </ReactCSSTransitionGroup>
+        </CSSTransitionGroup>
       </div>
     );
   }
