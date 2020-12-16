@@ -30,7 +30,17 @@ class ToDoList extends React.Component {
 
     return (
       <div>
+        <CSSTransitionGroup
+          transitionName="example"
+          transitionAppear={true}
+          transitionAppearTimeout={500}
+          transitionEnter={false}
+          transitionLeave={false}>
+          <h1>Fading at Initial Mount</h1>
+        </CSSTransitionGroup>
+
         <button onClick={this.handleAdd}>Add Item</button>
+        
         <CSSTransitionGroup
           transitionName="example"
           transitionEnterTimeout={500}
